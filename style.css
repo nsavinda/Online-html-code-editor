@@ -80,6 +80,7 @@ body {
     color: white;
     resize: unset;
     border: none;
+    overflow: scroll;
 }
 
 .view {
