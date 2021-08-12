@@ -4,35 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> HTML Editor & Viewer </title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 
 <body onresize="resize()" onload="resize() , run()">
-
     <div class="topnav">
         <!-- Nav Bar -->
         <a href="">Home</a>
-        <a href="#" onclick="run()" ontouchstart="run()">Run▶</a>
+        <a href="#" onclick="run()" ontouchenter="run()">Run▶</a>
         <div class="topnav-centered">
-            <a href="#" onmousedown="left()" onmouseup="leftStop()"  ontouchstart="left()"  ontouchend="leftStop()">▷</a>
-            <a href="#" onmousedown="right()" onmouseup="rightStop()"  ontouchstart="right()" ontouchend="rightStop()"> ◁ </a>
+            <a href="#" onmousedown="left()" onmouseup="leftStop()" ontouchstart="left()" ontouchend="leftStop()">▷</a>
+            <a href="#" onmousedown="right()" onmouseup="rightStop()" ontouchstart="right()" ontouchend="rightStop()"> ◁ </a>
         </div>
         <div class="topnav-right">
-            <a class="icon-view" id="icon-view" href="#" onclick="view()"  ontouchstart="view()">&#128187;</a>
-            <a class="icon-edit" id="icon-edit" href="#" onclick="edit()"  ontouchstart="edit()">&#9999;</a>
+            <a class="icon-view" id="icon-view" href="#" onclick="view()" ontouchenter="view()">&#128187;</a>
+            <a class="icon-edit" id="icon-edit" href="#" onclick="edit()" ontouchenter="edit() ">&#9999;</a>
         </div>
     </div>
     <!-- Nav Bar End -->
-
     <!-- Content  -->
-
     <div class="col">
         <!-- Editor (Left Column) -->
         <div class="col-left" id="colLeft" style="width:49%;">
             <!-- Editor Content Begin -->
             <textarea class="editor" id="editor">
+              
 <html>
 <head>
   <title>Hello HTML</title>
@@ -41,20 +39,15 @@
   <h1>Hello HTML</h1>
 </body>
 </html>
-
-             
+            
             </textarea>
-             <!-- Editor Content End-->
+            <!-- Editor Content End-->
         </div>
         <!-- View (Right Column) -->
         <div class="col-right" id="colRight" style="width:49%;">
             <iframe class="view" id="view" src="about:blank"></iframe>
         </div>
-
-
-
     </div>
-
 </body>
 
 </html>
