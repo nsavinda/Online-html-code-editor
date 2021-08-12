@@ -14,14 +14,14 @@
     <div class="topnav">
         <!-- Nav Bar -->
         <a href="">Home</a>
-        <a href="#" onclick="run()">Run▶</a>
+        <a href="#" onclick="run()" ontouchstart="run()">Run▶</a>
         <div class="topnav-centered">
-            <a href="#" onmousedown="left()" onmouseup="leftStop()">▷</a>
-            <a href="#" onmousedown="right()" onmouseup="rightStop()"> ◁ </a>
+            <a href="#" onmousedown="left()" onmouseup="leftStop()"  ontouchstart="left()"  ontouchend="leftStop()">▷</a>
+            <a href="#" onmousedown="right()" onmouseup="rightStop()"  ontouchstart="right()" ontouchend="rightStop()"> ◁ </a>
         </div>
         <div class="topnav-right">
-            <a class="icon-view" id="icon-view" href="#" onclick="view()">&#128187;</a>
-            <a class="icon-edit" id="icon-edit" href="#" onclick="edit()">&#128393;</a>
+            <a class="icon-view" id="icon-view" href="#" onclick="view()"  ontouchstart="view()">&#128187;</a>
+            <a class="icon-edit" id="icon-edit" href="#" onclick="edit()"  ontouchstart="edit()">&#9999;</a>
         </div>
     </div>
     <!-- Nav Bar End -->
