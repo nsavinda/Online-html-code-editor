@@ -72,6 +72,8 @@ function resize() {
             document.getElementById('colRight').style.display = "none";
             document.getElementById('icon-view').style.display = "block";
             document.getElementById('icon-edit').style.display = "none";
+            document.getElementById('topnav-centered').style.display = "none";
+
         }
         mobile = true;
     } else {
@@ -83,6 +85,7 @@ function resize() {
             document.getElementById('colLeft').style.display = "block";
             document.getElementById('icon-view').style.display = "none";
             document.getElementById('icon-edit').style.display = "none";
+            document.getElementById('topnav-centered').style.display = "block";
         }
         mobile = false;
     }
