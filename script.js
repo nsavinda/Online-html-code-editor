@@ -1,4 +1,4 @@
-// Run //
+//Run //
 function run() {
     var html = document.getElementById('editor').value
     var view = document.getElementById('view').contentWindow.document;
@@ -35,6 +35,7 @@ function leftExpand() {
         document.getElementById('colLeft').style.width = leftColWidth + "%";
         document.getElementById('colRight').style.width = rightColWidth + "%";
     }
+    viewSize();
 }
 
 function rightExpand() {
@@ -48,6 +49,7 @@ function rightExpand() {
         document.getElementById('colLeft').style.width = leftColWidth + "%";
         document.getElementById('colRight').style.width = rightColWidth + "%";
     }
+    viewSize();
 }
 
 // Stop Expanding and Shrinking //
@@ -74,7 +76,7 @@ function resize() {
             document.getElementById('icon-edit').style.display = "none";
             document.getElementById('topnav-centered').style.display = "none";
             document.getElementById('icon-info').style.display = "none";
-
+            document.getElementById('view-size').style.display = "none";
         }
         mobile = true;
     } else {
@@ -88,12 +90,16 @@ function resize() {
             document.getElementById('icon-edit').style.display = "none";
             document.getElementById('topnav-centered').style.display = "block";
             document.getElementById('icon-info').style.display = "block";
+            document.getElementById('view-size').style.display = "block";
         }
         mobile = false;
+        viewSize();
     }
+
+
 }
 
-// Mobile Change View & Editor //
+//Mobile Change View & Editor //
 function view() {
     document.getElementById('colRight').style.width = "100%";
     document.getElementById('colRight').style.display = "block";
@@ -108,4 +114,13 @@ function edit() {
     document.getElementById('colRight').style.display = "none";
     document.getElementById('icon-edit').style.display = "none";
     document.getElementById('icon-view').style.display = "block";
+}
+
+// View Size //
+function viewSize() {
+    let viewFrame = document.getElementById('view');
+    let viewWidth = viewFrame.contentWindow.innerWidth;
+    let viewHeight = viewFrame.contentWindow.innerHeight;
+    let viewSiz = document.getElementById('view-size');
+    viewSiz.innerHTML = "Result Size: " + viewWidth + " X " + viewHeight;
 }

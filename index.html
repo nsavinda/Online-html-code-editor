@@ -9,17 +9,22 @@
     <script src="script.js"></script>
 </head>
 
-<body onresize="resize()" onload="resize() , run()">
+<body onresize="resize()" onload="resize() , run() ">
     <div class="topnav">
         <!-- Nav Bar -->
         <a href="" title="Home">Home</a>
         <a href="#" onclick="run()" ontouchenter="run()" title="Run">Run▶</a>
         <div class="topnav-centered" id="topnav-centered">
+            <!-- Change columns width -->
             <a href="#" onmousedown="left()" onmouseup="leftStop()" ontouchstart="left()" ontouchend="leftStop()">▷</a>
             <a href="#" onmousedown="right()" onmouseup="rightStop()" ontouchstart="right()" ontouchend="rightStop()"> ◁ </a>
         </div>
         <div class="topnav-right">
+            <!-- Result Size -->
+            <div class="view-size" id="view-size">A</div>
+            <!-- Github -->
             <a class="icon-info" id="icon-info" title="Github" href="https://github.com/nsavinda/Online-html-code-editor"> &#128712;</a>
+            <!-- Switch View & Editor -->
             <a class="icon-view" id="icon-view" href="#" onclick="view()" ontouchenter="view()" title="view">&#128187;</a>
             <a class="icon-edit" id="icon-edit" href="#" onclick="edit()" ontouchenter="edit()" title="Edit">&#9999;</a>
         </div>
@@ -34,7 +39,7 @@
               
 <html>
 <head>
-  <title>Hello HTML</title>
+  <title> HTML </title>
 </head>
 <body>
   <h1>Hello HTML</h1>
@@ -45,8 +50,8 @@
             <!-- Editor Content End-->
         </div>
         <!-- View (Right Column) -->
-        <div class="col-right" id="colRight" style="width:49%;">
-            <iframe class="view" id="view" src="about:blank"></iframe>
+        <div class="col-right" id="colRight" onresize="viewSize()" style="width:49%;">
+            <iframe on class="view" id="view" src="about:blank">  </iframe>
         </div>
     </div>
 </body>
